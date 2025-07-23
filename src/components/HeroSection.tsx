@@ -16,12 +16,12 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="bg-accent/10 p-4 rounded-lg border-l-4 border-l-accent">
-              <p className="text-sm font-medium text-accent-foreground">
+              <p className="text-sm font-medium text-foreground">
                 ✓ Informações verificadas e atualizadas
               </p>
             </div>
             <div className="bg-primary/10 p-4 rounded-lg border-l-4 border-l-primary">
-              <p className="text-sm font-medium text-primary-foreground">
+              <p className="text-sm font-medium text-foreground">
                 ✓ Linguagem clara e acessível
               </p>
             </div>
