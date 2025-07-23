@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
 import TopicCard from "@/components/TopicCard";
+import AccessibilityControls from "@/components/AccessibilityControls";
 import { 
   Lock, 
   AlertTriangle, 
@@ -13,6 +15,9 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import digitalRightsImg from "@/assets/digital-rights.jpg";
+import passwordSecurityImg from "@/assets/password-security.jpg";
+import onlineScamsImg from "@/assets/online-scams.jpg";
 
 const Index = () => {
   const topics = [
@@ -21,18 +26,21 @@ const Index = () => {
       description: "Conheça seus direitos como cidadão no mundo digital. Privacidade, proteção de dados e muito mais.",
       icon: FileText,
       color: "primary" as const,
+      illustration: digitalRightsImg,
     },
     {
       title: "Senhas Seguras",
       description: "Aprenda a criar e gerenciar senhas fortes para proteger suas contas online.",
       icon: Lock,
       color: "accent" as const,
+      illustration: passwordSecurityImg,
     },
     {
       title: "Golpes na Internet",
       description: "Identifique e evite os golpes mais comuns na internet, e-mail e redes sociais.",
       icon: AlertTriangle,
       color: "warning" as const,
+      illustration: onlineScamsImg,
     },
     {
       title: "Compras Online Seguras",
@@ -64,6 +72,7 @@ const Index = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-8">
+        <HeroSection />
         <IntroSection />
         
         <section className="mb-12">
@@ -78,6 +87,7 @@ const Index = () => {
                 description={topic.description}
                 icon={topic.icon}
                 color={topic.color}
+                illustration={topic.illustration}
                 onClick={() => handleTopicClick(topic.title)}
               />
             ))}
@@ -119,6 +129,8 @@ const Index = () => {
           </p>
         </div>
       </footer>
+      
+      <AccessibilityControls />
     </div>
   );
 };
