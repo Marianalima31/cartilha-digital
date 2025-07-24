@@ -62,9 +62,19 @@ const Index = () => {
     },
   ];
 
-  const handleTopicClick = (topic: string) => {
-    // Future navigation implementation
-    console.log(`Navigating to ${topic}`);
+  const handleTopicClick = (title: string) => {
+    const routes: { [key: string]: string } = {
+      "Seus Direitos Digitais": "/direitos-digitais",
+      "Senhas Seguras": "/senhas-seguras", 
+      "Golpes na Internet": "/golpes-internet",
+      "Compras Online Seguras": "/compras-online",
+      "Redes Sociais": "/redes-sociais",
+      "Proteção Geral": "/protecao-geral"
+    };
+    
+    if (routes[title]) {
+      window.location.href = routes[title];
+    }
   };
 
   return (
