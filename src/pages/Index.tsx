@@ -122,7 +122,7 @@ const Index = () => {
       <footer className="bg-card border-t border-border py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            © 2024 Cartilha Digital - Direitos Digitais para Idosos
+            © 2025 Cartilha Digital - Direitos Digitais para Idosos
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Informação acessível e segura para todos
